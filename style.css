@@ -1,0 +1,279 @@
+/*
+
+====================================================
+
+	1. PRIMARY STYLES
+	2. SEARCH BAR
+	3. ITEM
+	4. RETURN TO TOP ARROW
+	5. FAVOURITES
+
+====================================================
+ */
+ 
+ /*
+====================================================
+	1. PRIMARY STYLES
+====================================================
+ */
+
+h1, h2, h3, h4, p, li {
+    font-family: "Arial", Gadget, sans-serif;
+}
+
+h1 {
+    color: white;
+    background-image: linear-gradient(to right, #254F85, #039451);
+    border-radius: 25px;
+    text-align: center;
+    font-size: 32px;
+    margin-top:20px;
+    padding: 30px 30px;
+}
+
+h1, #content {
+    margin-left:60px;
+    margin-right:60px;
+}
+
+#svg {
+    display: none;
+}
+
+#content {
+    padding-top:30px;
+    padding-bottom:18px;
+}
+
+/*
+====================================================
+	2. SEARCH BAR
+====================================================
+ */
+ 
+.search-bar {
+  height: 54px;
+  width: 400px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 20px;
+  position: relative;
+  background: #254F85;
+  margin:auto;
+}
+
+#input {
+  border: none;
+  height: 25px;
+  width: 330px;
+  background-color: #254F85;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+#input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #254F85 inset;
+    -webkit-text-fill-color: white !important;
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder { color: white; opacity: 1;}
+
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder { color: white; }
+
+/* Microsoft Edge */
+::-ms-input-placeholder { color: white; }
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+
+.label {
+  color: white;
+  position: absolute;
+  top: 18px;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+#btn {
+  background: white;
+  border-radius: 50px;
+  height: 50px;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  justify-content: center;
+  cursor: pointer;
+  right: 2px;
+  position: absolute;
+  transition: all 1s ease;
+}
+
+.icon {
+  display: inline-flex;
+}
+
+.icon-18 {
+  width: 18px;
+  height: 18px;
+}
+
+#btn:hover {
+  transform: rotate(90deg);
+  transition: all 1s ease;
+}
+
+.highlight {
+  width: 0px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  bottom: 8px;
+  transition: all 1s ease;
+}
+
+#input:focus ~ .highlight {
+  width: 350px;
+  transition: all 1s ease;
+}
+
+
+/*
+====================================================
+	3. ITEMS
+====================================================
+ */
+
+h2{
+    margin-left:20px;
+}
+
+hr {
+    border: 1px solid #039451; 
+    margin-left:20px; 
+    margin-right:20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(16,28,61,0.2);
+  transition: 0.3s;
+  margin:20px 16px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(16,28,61,0.2);
+}
+
+
+.itemTitle {
+  padding: 2px 16px;
+  font-size:32px;
+  background-color: rgb(37,79,133);
+  border-radius:25px;
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+.star {
+    text-align:center;
+    padding: 13px 0;
+}
+.fas {
+    font-size:22px;
+    cursor:pointer;
+    color:rgb(184, 184, 184);
+}
+
+h4{
+    color:white;
+    font-size:18px;
+}
+
+
+
+.itemInfo {
+    padding:20px;
+    background-color:white;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.bin{
+    width:160px;
+    height:160px;
+    text-align: center;
+}
+
+.binImg{
+    vertical-align: middle;
+    width:80px;
+    height:120px;
+}
+
+.binTitle {
+    margin-top:5px;
+}
+
+.infos {
+    vertical-align:top;
+    font-size:18px;
+}
+.infos li {
+    margin-top:10px;
+}
+
+.infos li a {
+    text-decoration: none;
+    color: #3A7CD1;
+}
+
+
+
+/*
+====================================================
+	4. RETURN TO TOP ARROW
+====================================================
+ */
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    background: rgb(3,148,81);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgb(37,79,133);
+}
+
+
+
+/*
+====================================================
+	5. FAVOURITES
+====================================================
+ */
+ 
+h3 {
+    font-size:28px;
+    color: #039451;
+    margin-left:20px;
+}
